@@ -1,5 +1,5 @@
 {% set name = "django-formtools" %}
-{% set version = "2.4.1" %}
+{% set version = "2.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/django-formtools-{{ version }}.tar.gz
-  sha256: 21f8d5dac737f1e636fa8a0a10969c1c32f525a6dfa27c29592827ba70d9643a
+  sha256: 47cb34552c6efca088863d693284d04fc36eaaf350eb21e1a1d935e0df523c93
 
 build:
   noarch: python
