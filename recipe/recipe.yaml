@@ -3,18 +3,18 @@ schema_version: 1
 
 context:
   name: django-formtools
-  version: "2.5.1"
+  version: 2.6.1
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/django-formtools-${{ version }}.tar.gz
-  sha256: 47cb34552c6efca088863d693284d04fc36eaaf350eb21e1a1d935e0df523c93
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  sha256: 603ebc69a4b76b9bf38534f6e0245face007c7ed31bdfa073f8bf45cff5d7122
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -26,8 +26,7 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }},<4.0
-    - django >=3.2
-
+    - django >=4.2
 tests:
   - python:
       imports:
